@@ -31,6 +31,8 @@ class CreateUsuarioRolTable extends Migration
             ->OnUpdate('restrict');
 
             $table->boolean('estado');
+            $table->charset = 'utf8mb4';
+            $table->collation = 'utf8mb4_spanish_ci';
             $table->timestamps();
         });
     }

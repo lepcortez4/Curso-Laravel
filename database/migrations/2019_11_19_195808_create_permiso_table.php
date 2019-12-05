@@ -17,6 +17,8 @@ class CreatePermisoTable extends Migration
             $table->increments('id');
             $table->string('nombre', 50)->unique();
             $table->string('slug', 50)->unique();
+            $table->charset = 'utf8mb4';
+            $table->collation = 'utf8mb4_spanish_ci';
             $table->timestamps();
         });
     }
